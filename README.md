@@ -4,7 +4,7 @@ A personal portfolio website to showcase my skills, projects, and experience. Th
 
 ## Live Demo
 
-[Link to your live portfolio website](https://your-portfolio-link.com)
+[Live Demo of the portfolio website](https://imrajeevnayan.github.io/Portfolio/)
 
 ## Features
 
@@ -111,4 +111,4 @@ feel free to leave a star (much appreciated) fork it and customize as you like! 
 
 -  🙌
 ## Live Demo
-[Click Here](https://your-live-demo-link.com)
+[Click Here](https://imrajeevnayan.github.io/Portfolio/)
