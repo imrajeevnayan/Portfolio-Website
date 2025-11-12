@@ -121,12 +121,17 @@ This project is distributed under the MIT License. See the [LICENSE](LICENSE) fi
 ## 💬 Contact Me
 
 - 📧 **Email**: [imrajeevnayan@gmail.com](mailto:imrajeevnayan@gmail.com)
-- 🔗 **LinkedIn**: [linkedin.com/in/imrajeevnayan](https://www.linkedin.com/in/imrajeevnayan/)
-- 📸 **Instagram**: [@imrajeevnayan](https://www.instagram.com/imrajeevnayan/)
+- 🔗 **LinkedIn**: [linkedin](https://www.linkedin.com/in/imrajeevnayan/)
+- 📸 **Instagram**: [Instagram](https://www.instagram.com/imrajeevnayan/)
 
 ---
 
 <p align="center">
   Made with ❤️ by <strong>Rajeev Nayan</strong>
+</p>
+<p align="center">
+  <a href="https://github.com/imrajeevnayan/Portfolio">
+    <img src="https://img.shields.io/github/stars/imrajeevnayan/Portfolio?style=social" alt="GitHub stars">
+  </a>
 </p>
 ## 🏆 Thank you for visiting my portfolio website! 😊
