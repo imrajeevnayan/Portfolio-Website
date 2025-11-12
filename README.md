@@ -121,4 +121,5 @@ This project is distributed under the MIT License. See the [LICENSE](LICENSE) fi
 For any inquiries, feel free to reach out to me at:
 **Email**: [imrajeevnayan@gmail.com](mailto:imrajeevnayan@gmail.com)
 **GitHub**: [imrajeevnayan](https://github.com/imrajeevnayan)
-**LinkedIn**: [imrajeevnayan](https://www.linkedin.com/in/imrajeevnayan/) 
+**LinkedIn**: [imrajeevnayan](https://www.linkedin.com/in/imrajeevnayan/)
+## 🏆 Thank you for visiting my portfolio website! 😊
