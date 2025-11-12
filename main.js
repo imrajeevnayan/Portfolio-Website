@@ -424,7 +424,7 @@ class PortfolioApp {
             const categoryElement = document.createElement('div');
             categoryElement.className = 'skill-category mb-8';
             categoryElement.innerHTML = `
-                <h3 class="text-xl font-bold text-white mb-4">${category.category}</h3>
+                <h3 class="text-xl font-bold mb-4">${category.category}</h3>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                     ${category.skills.map(skill => `
                         <div class="skill-tag bg-slate-800 p-3 rounded-lg text-center hover:bg-slate-700 transition-colors cursor-pointer">
