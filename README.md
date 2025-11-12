@@ -33,7 +33,7 @@ You need a web browser to view the website.
 
 1.  Clone the repository:
     ```sh
-    git clone https://github.com/imrajeevnayan/Portfolio-Website.git
+    git clone https://github.com/imrajeevnayan/Portfolio.git
     ```
 2.  Navigate to the project directory:
     ```sh
@@ -89,7 +89,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Rajeev Nayan - [imrajeevnayan@gmail.com](mailto:imrajeevnayan@gmail.com)
 
-Project Link: [https://github.com/imrajeevnayan/Portfolio-Website](https://github.com/imrajeevnayan/Portfolio-Website)
+Project Link: [https://github.com/imrajeevnayan/Portfolio](https://github.com/imrajeevnayan/Portfolio)
 ## Portfolio Website ✨
 
 Responsive Portfolio Website Using HTML, CSS and JavaScript, with a beautiful user interface.
