@@ -2,6 +2,23 @@
 
 This is my personal **Portfolio Website** designed to showcase my skills, projects, and experience. It serves as a professional online presence for potential employers, collaborators, and anyone interested in my work. The website features a modern design, a responsive layout, and interactive elements for a great user experience.
 
+## 📋 Table of Contents
+- [Portfolio Website ✨](#portfolio-website-)
+  - [📋 Table of Contents](#-table-of-contents)
+  - [🚀 Live Demo](#-live-demo)
+  - [📸 Portfolio Demo](#-portfolio-demo)
+  - [🔧 Features](#-features)
+  - [⚙️ Technologies Used](#️-technologies-used)
+  - [🏁 Getting Started](#-getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+  - [🗂️ Project Structure](#️-project-structure)
+    - [Key Files](#key-files)
+  - [🤝 Contributing](#-contributing)
+    - [How to Contribute](#how-to-contribute)
+  - [📄 License](#-license)
+  - [💬 Contact Me](#-contact-me)
+
 ## 🚀 Live Demo
 
 Check out the live version of the website here:
@@ -10,8 +27,6 @@ Check out the live version of the website here:
 ## 📸 Portfolio Demo
 
 ![Portfolio Demo](./resources/portfolio-demo.gif)
-
-
 
 ## 🔧 Features
 
@@ -116,12 +131,13 @@ If you're unsure, feel free to open an issue with the tag "enhancement".
 
 ## 📄 License
 
-This project is distributed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+You can freely use, modify, and distribute this project under the terms of the MIT License.
 
 ## 💬 Contact Me
 
 - 📧 **Email**: [imrajeevnayan@gmail.com](mailto:imrajeevnayan@gmail.com)
-- 🔗 **LinkedIn**: [linkedin](https://www.linkedin.com/in/imrajeevnayan/)
+- 🔗 **LinkedIn**: [LinkedIn](https://www.linkedin.com/in/imrajeevnayan/)
 - 📸 **Instagram**: [Instagram](https://www.instagram.com/imrajeevnayan/)
 
 ---
@@ -129,11 +145,18 @@ This project is distributed under the MIT License. See the [LICENSE](LICENSE) fi
 <p align="center">
   Made with ❤️ by <strong>Rajeev Nayan</strong>
 </p>
+
+<p align="center">
+  "Building meaningful web experiences one project at a time."
+</p>
+
 <p align="center">
   <a href="https://github.com/imrajeevnayan/Portfolio">
     <img src="https://img.shields.io/github/stars/imrajeevnayan/Portfolio?style=social" alt="GitHub stars">
   </a>
 </p>
-   <h1 align="center">
- 🏆 Thank you for visiting my portfolio website! 😊
+
+<h1 align="center">
+  🏆 Thank you for visiting my portfolio website! 😊
 </h1>
+
