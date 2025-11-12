@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Portfolio Website
 
 A personal portfolio website to showcase my skills, projects, and experience. This website is designed to be a professional online presence for potential employers and collaborators. It features a clean, modern design with a focus on user experience.
@@ -90,3 +91,25 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Rajeev Nayan - [imrajeevnayan@gmail.com](mailto:imrajeevnayan@gmail.com)
 
 Project Link: [https://github.com/your-username/your-repo](https://github.com/your-username/your-repo)
+=======
+## Portfolio Website ✨
+
+Responsive Portfolio Website Using HTML, CSS and JavaScript, with a beautiful user interface. 
+Website contains: 
+- Header 
+- Home
+- About
+- Skills
+- Qualification
+- Services
+- Portfolio
+- Project in mind
+- Testimonial
+- Contact
+- Footer 
+
+If u liked my website and the code was useful to you, <br>
+feel free to leave a star (much appreciated) fork it and customize as you like! :)
+
+-  🙌
+>>>>>>> b6b4193e12654770ad80ab3455ce43bbeb583010
