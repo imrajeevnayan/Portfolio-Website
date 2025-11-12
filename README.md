@@ -118,10 +118,15 @@ If you're unsure, feel free to open an issue with the tag "enhancement".
 
 This project is distributed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-## 📧 Contact
+## 💬 Contact Me
 
-For any inquiries, feel free to reach out to me at:
-**Email**: [imrajeevnayan@gmail.com](mailto:imrajeevnayan@gmail.com)
-**GitHub**: [imrajeevnayan](https://github.com/imrajeevnayan)
-**LinkedIn**: [imrajeevnayan](https://www.linkedin.com/in/imrajeevnayan/)
+- 📧 **Email**: [imrajeevnayan@gmail.com](mailto:imrajeevnayan@gmail.com)
+- 🔗 **LinkedIn**: [linkedin.com/in/imrajeevnayan](https://www.linkedin.com/in/imrajeevnayan/)
+- 📸 **Instagram**: [@imrajeevnayan](https://www.instagram.com/imrajeevnayan/)
+
+---
+
+<p align="center">
+  Made with ❤️ by <strong>Rajeev Nayan</strong>
+</p>
 ## 🏆 Thank you for visiting my portfolio website! 😊
