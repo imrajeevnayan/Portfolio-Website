@@ -134,4 +134,6 @@ This project is distributed under the MIT License. See the [LICENSE](LICENSE) fi
     <img src="https://img.shields.io/github/stars/imrajeevnayan/Portfolio?style=social" alt="GitHub stars">
   </a>
 </p>
+   <h1 align="center">
 ## 🏆 Thank you for visiting my portfolio website! 😊
+</h1>
