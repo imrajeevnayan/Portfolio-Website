@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajeev Nayan - Full Stack Java Developer</title>
+    <meta name="description" content="Full Stack Java Developer specializing in Spring Boot, ReactJS, Microservices, and modern web technologies. Building scalable, secure applications.">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pixi.js@7.3.2/dist/pixi.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold gradient-text">Rajeev Nayan</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="nav-link active text-slate-300 hover:text-amber-400 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="about.html" class="nav-link text-slate-300 hover:text-amber-400 px-3 py-2 text-sm font-medium">About</a>
+                        <a href="projects.html" class="nav-link text-slate-300 hover:text-amber-400 px-3 py-2 text-sm font-medium">Projects</a>
+                        <a href="contact.html" class="nav-link text-slate-300 hover:text-amber-400 px-3 py-2 text-sm font-medium">Contact</a>
+                        <button id="theme-toggle" class="ml-4 text-slate-300 hover:text-amber-400">
+                            <svg id="theme-toggle-dark-icon" class="h-6 w-6 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                            <svg id="theme-toggle-light-icon" class="h-6 w-6 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.121-3.536a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM4.95 6.464a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM13 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm-1 11a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 14.95a1 1 0 01-1.414 0l-.707-.707a1 1 0 011.414-1.414l.707.707a1 1 0 010 1.414zM2 10a1 1 0 011-1h1a1 1 0 110 2H3a1 1 0 01-1-1zm14 0a1 1 0 011-1h1a1 1 0 110 2h-1a1 1 0 01-1-1z"></path></svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="theme-toggle-mobile" class="text-slate-300 hover:text-amber-400 mr-4">
+                        <svg id="theme-toggle-dark-icon-mobile" class="h-6 w-6 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                        <svg id="theme-toggle-light-icon-mobile" class="h-6 w-6 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4-0 11-8 0 4 4-0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.121-3.536a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM4.95 6.464a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM13 2a1 1 0 011 1v1a1 1-0 11-2 0V3a1 1 0 011-1zm-1 11a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 14.95a1 1 0 01-1.414 0l-.707-.707a1 1 0 011.414-1.414l.707.707a1 1 0 010 1.414zM2 10a1 1 0 011-1h1a1 1 0 110 2H3a1 1 0 01-1-1zm14 0a1 1 0 011-1h1a1 1 0 110 2h-1a1 1 0 01-1-1z"></path></svg>
+                    </button>
+                    <button class="text-slate-300 hover:text-amber-400">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center pt-16">
+        <canvas id="particle-canvas"></canvas>
+        <div class="hero-content w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8">
+                        <div class="space-y-4">
+                            <h1 class="hero-title text-5xl md:text-6xl font-display font-bold leading-tight">
+                                <span class="text-white">Full Stack</span>
+                                <br>
+                                <span class="gradient-text">Java Developer</span>
+                            </h1>
+                            <p class="hero-subtitle text-xl text-slate-300 leading-relaxed">
+                                Crafting scalable, secure applications with Spring Boot, ReactJS, and modern microservices architecture. Passionate about clean code and production-ready systems.
+                            </p>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            <a href="projects.html" class="pulse-glow bg-amber-500 hover:bg-amber-600 text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                                View Projects
+                            </a>
+                            <a href="contact.html" class="border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                                Get In Touch
+                            </a>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3 mt-8">
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm">Java</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm">Spring Boot</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm">ReactJS</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm">Microservices</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm">Docker</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm">PostgreSQL</span>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="floating-element">
+                            <img src="resources/professional-photo.jpg" alt="Rajeev Nayan - Full Stack Java Developer" class="w-full max-w-sm mx-auto rounded-lg shadow-2xl">
+                        </div>
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-amber-400 rounded-full opacity-20 floating-element"></div>
+                        <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-teal-400 rounded-full opacity-20 floating-element" style="animation-delay: -2s;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-20 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl font-display font-bold text-white mb-4">Technical Expertise</h2>
+                <p class="text-xl text-slate-300 max-w-3xl mx-auto">
+                    Specialized in modern full-stack development with expertise across the entire technology stack
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="animate-on-scroll">
+                    <h3 class="text-2xl font-bold text-white mb-8">Core Technologies</h3>
+                    <div id="skills-container" class="space-y-6">
+                        <!-- Skills will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="animate-on-scroll">
+                    <h3 class="text-2xl font-bold text-white mb-8">Skill Distribution</h3>
+                    <div id="skills-chart" class="h-96 bg-slate-700 rounded-lg p-4">
+                        <!-- Chart will be populated by ECharts -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Featured Projects -->
+    <section class="py-20 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl font-display font-bold text-white mb-4">Featured Projects</h2>
+                <p class="text-xl text-slate-300 max-w-3xl mx-auto">
+                    Real-world applications showcasing modern development practices and scalable architecture
+                </p>
+            </div>
+
+            <div id="project-carousel" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Projects will be populated by JavaScript -->
+            </div>
+
+            <div class="text-center mt-12 animate-on-scroll">
+                <a href="projects.html" class="inline-flex items-center bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                    View All Projects
+                    <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Experience Overview -->
+    <section class="py-20 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl font-display font-bold text-white mb-4">Professional Journey</h2>
+                <p class="text-xl text-slate-300 max-w-3xl mx-auto">
+                    Results-driven developer with experience in building production-ready applications
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center animate-on-scroll">
+                    <div class="bg-slate-700 rounded-lg p-8 hover:bg-slate-600 transition-colors">
+                        <div class="text-4xl font-bold text-amber-400 mb-2">2+</div>
+                        <div class="text-white font-semibold mb-2">Years Experience</div>
+                        <div class="text-slate-300 text-sm">Full Stack Development</div>
+                    </div>
+                </div>
+
+                <div class="text-center animate-on-scroll">
+                    <div class="bg-slate-700 rounded-lg p-8 hover:bg-slate-600 transition-colors">
+                        <div class="text-4xl font-bold text-teal-400 mb-2">6+</div>
+                        <div class="text-white font-semibold mb-2">Major Projects</div>
+                        <div class="text-slate-300 text-sm">Production Applications</div>
+                    </div>
+                </div>
+
+                <div class="text-center animate-on-scroll">
+                    <div class="bg-slate-700 rounded-lg p-8 hover:bg-slate-600 transition-colors">
+                        <div class="text-4xl font-bold text-amber-400 mb-2">8+</div>
+                        <div class="text-white font-semibold mb-2">Technologies</div>
+                        <div class="text-slate-300 text-sm">Core Competencies</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-700 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="https://linkedin.com/in/imrajeevnayan" class="text-slate-400 hover:text-amber-400 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/imrajeevnayan" class="text-slate-400 hover:text-amber-400 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:imrajeevnayan@gmail.com" class="text-slate-400 hover:text-amber-400 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </a>
+                </div>
+                <p class="text-slate-400 text-sm">
+                    © 2025 Rajeev Nayan. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+
+    <script>
+        // Initialize ECharts for skills visualization
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillsChart = echarts.init(document.getElementById('skills-chart'));
+
+            const option = {
+                backgroundColor: 'transparent',
+                tooltip: {
+                    trigger: 'item',
+                    backgroundColor: '#1e293b',
+                    borderColor: '#f59e0b',
+                    textStyle: {
+                        color: '#f8fafc'
+                    }
+                },
+                series: [{
+                    name: 'Skills',
+                    type: 'pie',
+                    radius: ['40%', '70%'],
+                    center: ['50%', '50%'],
+                    data: [
+                        {value: 90, name: 'Java', itemStyle: {color: '#f59e0b'}},
+                        {value: 85, name: 'Spring Boot', itemStyle: {color: '#14b8a6'}},
+                        {value: 80, name: 'ReactJS', itemStyle: {color: '#f59e0b'}},
+                        {value: 85, name: 'Microservices', itemStyle: {color: '#14b8a6'}},
+                        {value: 75, name: 'PostgreSQL', itemStyle: {color: '#f59e0b'}},
+                        {value: 80, name: 'Docker', itemStyle: {color: '#14b8a6'}},
+                        {value: 70, name: 'Kafka', itemStyle: {color: '#f59e0b'}},
+                        {value: 85, name: 'JWT Security', itemStyle: {color: '#14b8a6'}}
+                    ],
+                    emphasis: {
+                        itemStyle: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    },
+                    label: {
+                        color: '#f8fafc',
+                        fontSize: 12
+                    },
+                    labelLine: {
+                        lineStyle: {
+                            color: '#64748b'
+                        }
+                    }
+                }]
+            };
+
+            skillsChart.setOption(option);
+
+            // Responsive chart
+            window.addEventListener('resize', function() {
+                skillsChart.resize();
+            });
+        });
+    </script>
+</body>
+</html>

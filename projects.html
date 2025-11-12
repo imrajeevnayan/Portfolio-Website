@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Rajeev Nayan</title>
+    <meta name="description" content="Explore Rajeev Nayan's portfolio of full-stack Java projects including microservices, real-time applications, and scalable systems.">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold gradient-text">Rajeev Nayan</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="nav-link text-slate-300 hover:text-amber-400 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="about.html" class="nav-link text-slate-300 hover:text-amber-400 px-3 py-2 text-sm font-medium">About</a>
+                        <a href="projects.html" class="nav-link active text-slate-300 hover:text-amber-400 px-3 py-2 text-sm font-medium">Projects</a>
+                        <a href="contact.html" class="nav-link text-slate-300 hover:text-amber-400 px-3 py-2 text-sm font-medium">Contact</a>
+                        <button id="theme-toggle" class="ml-4 text-slate-300 hover:text-amber-400">
+                            <svg id="theme-toggle-dark-icon" class="h-6 w-6 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                            <svg id="theme-toggle-light-icon" class="h-6 w-6 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.121-3.536a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM4.95 6.464a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM13 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm-1 11a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 14.95a1 1 0 01-1.414 0l-.707-.707a1 1 0 011.414-1.414l.707.707a1 1 0 010 1.414zM2 10a1 1 0 011-1h1a1 1 0 110 2H3a1 1 0 01-1-1zm14 0a1 1 0 011-1h1a1 1 0 110 2h-1a1 1 0 01-1-1z"></path></svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="theme-toggle-mobile" class="text-slate-300 hover:text-amber-400 mr-4">
+                        <svg id="theme-toggle-dark-icon-mobile" class="h-6 w-6 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                        <svg id="theme-toggle-light-icon-mobile" class="h-6 w-6 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.121-3.536a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM4.95 6.464a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM13 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm-1 11a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 14.95a1 1 0 01-1.414 0l-.707-.707a1 1 0 011.414-1.414l.707.707a1 1 0 010 1.414zM2 10a1 1 0 011-1h1a1 1 0 110 2H3a1 1 0 01-1-1zm14 0a1 1 0 011-1h1a1 1 0 110 2h-1a1 1 0 01-1-1z"></path></svg>
+                    </button>
+                    <button class="text-slate-300 hover:text-amber-400">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center animate-on-scroll">
+                <h1 class="text-5xl font-display font-bold text-white mb-6">My Projects</h1>
+                <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                    A showcase of full-stack applications demonstrating expertise in modern technologies, scalable architecture, and production-ready systems.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-8 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4 animate-on-scroll">
+                <button class="filter-btn active px-6 py-2 rounded-full text-sm font-medium" data-filter="all">
+                    All Projects
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium" data-filter="spring-boot">
+                    Spring Boot
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium" data-filter="reactjs">
+                    ReactJS
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium" data-filter="microservices">
+                    Microservices
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium" data-filter="real-time">
+                    Real-time
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium" data-filter="full-stack">
+                    Full Stack
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="py-16 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+
+                <!-- Real-Time Chat Application -->
+                <div class="project-item rounded-lg overflow-hidden animate-on-scroll"
+                     data-categories="spring-boot,reactjs,real-time,full-stack"
+                     data-tech="Spring Boot,ReactJS,WebSocket,Redis,PostgreSQL,JWT"
+                     data-github="https://github.com/rajeevnayan/chat-application"
+                     data-demo="https://chat-demo.rajeevnayan.com">
+                    <div class="relative overflow-hidden">
+                        <img src="https://kimi-web-img.moonshot.cn/img/www.promptcloud.com/81bc884c0a950088996453a070dc1b77e229f6fa.jpg"
+                             alt="Real-Time Chat Application" class="project-image w-full">
+                        <div class="absolute top-4 right-4">
+                            <div class="complexity-indicator">
+                                <div class="complexity-dot active"></div>
+                                <div class="complexity-dot active"></div>
+                                <div class="complexity-dot active"></div>
+                                <div class="complexity-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="project-title text-xl font-bold text-white mb-3">Real-Time Chat Application</h3>
+                        <p class="project-description text-slate-300 mb-4 text-sm">
+                            Secure real-time chat platform supporting multiple active users with JWT authentication, role-based access control, and Redis caching for low-latency performance.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag px-2 py-1 rounded-full">Spring Boot</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">ReactJS</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">WebSocket</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">Redis</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">PostgreSQL</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">JWT</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-slate-400 text-xs">Full Stack Application</span>
+                            <div class="flex space-x-2">
+                                <a href="https://github.com/imrajeevnayan/chat-application" class="text-slate-400 hover:text-amber-400 transition-colors">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://chat-demo.rajeevnayan.com" class="text-slate-400 hover:text-teal-400 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stock Trading Simulation -->
+                <div class="project-item rounded-lg overflow-hidden animate-on-scroll"
+                     data-categories="spring-boot,reactjs,real-time,microservices"
+                     data-tech="Spring Boot,Kafka,ReactJS,Redis,PostgreSQL,JWT"
+                     data-github="https://github.com/rajeevnayan/stock-trading-sim"
+                     data-demo="https://trading-demo.rajeevnayan.com">
+                    <div class="relative overflow-hidden">
+                        <img src="https://kimi-web-img.moonshot.cn/img/us1.discourse-cdn.com/882e94df821e208d682ce859870b381f6ec9338b.png"
+                             alt="Stock Trading Simulation" class="project-image w-full">
+                        <div class="absolute top-4 right-4">
+                            <div class="complexity-indicator">
+                                <div class="complexity-dot active"></div>
+                                <div class="complexity-dot active"></div>
+                                <div class="complexity-dot active"></div>
+                                <div class="complexity-dot active"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="project-title text-xl font-bold text-white mb-3">Real-Time Stock Trading Simulation</h3>
+                        <p class="project-description text-slate-300 mb-4 text-sm">
+                            Event-driven stock trading simulator with real-time data updates using Kafka for asynchronous event handling and WebSocket notifications for live trade executions.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag px-2 py-1 rounded-full">Spring Boot</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">Kafka</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">ReactJS</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">Redis</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">PostgreSQL</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">JWT</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-slate-400 text-xs">Event-Driven System</span>
+                            <div class="flex space-x-2">
+                                <a href="https://github.com/imrajeevnayan/stock-trading-sim" class="text-slate-400 hover:text-amber-400 transition-colors">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://trading-demo.imrajeevnayan.com" class="text-slate-400 hover:text-teal-400 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-Commerce Platform -->
+                <div class="project-item rounded-lg overflow-hidden animate-on-scroll"
+                     data-categories="spring-boot,reactjs,microservices,full-stack"
+                     data-tech="Spring Boot,ReactJS,PostgreSQL,Kafka,Redis,Docker"
+                     data-github="https://github.com/imrajeevnayan/ecommerce-platform"
+                     data-demo="https://ecommerce-demo.imrajeevnayan.com">
+                    <div class="relative overflow-hidden">
+                        <img src="https://kimi-web-img.moonshot.cn/img/miro.medium.com/f9fdc58c4ca3492b412e65a84616b1b4f22ff7c7.jpeg"
+                             alt="E-Commerce Platform" class="project-image w-full">
+                        <div class="absolute top-4 right-4">
+                            <div class="complexity-indicator">
+                                <div class="complexity-dot active"></div>
+                                <div class="complexity-dot active"></div>
+                                <div class="complexity-dot active"></div>
+                                <div class="complexity-dot active"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="project-title text-xl font-bold text-white mb-3">E-Commerce Platform</h3>
+                        <p class="project-description text-slate-300 mb-4 text-sm">
+                            Scalable e-commerce platform using microservice architecture with Kafka-based messaging for real-time order tracking and Docker containerization for easy deployment.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag px-2 py-1 rounded-full">Spring Boot</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">ReactJS</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">PostgreSQL</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">Kafka</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">Redis</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">Docker</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-slate-400 text-xs">Microservices Architecture</span>
+                            <div class="flex space-x-2">
+                                <a href="https://github.com/imrajeevnayan/ecommerce-platform" class="text-slate-400 hover:text-amber-400 transition-colors">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://ecommerce-demo.imrajeevnayan.com" class="text-slate-400 hover:text-teal-400 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Learning Management System -->
+                <div class="project-item rounded-lg overflow-hidden animate-on-scroll"
+                     data-categories="spring-boot,reactjs,real-time,full-stack"
+                     data-tech="Spring Boot,ReactJS,PostgreSQL,WebSocket,Redis,JWT"
+                     data-github="https://github.com/rajeevnayan/lms-platform"
+                     data-demo="https://lms-demo.rajeevnayan.com">
+                    <div class="relative overflow-hidden">
+                        <img src="https://kimi-web-img.moonshot.cn/img/datafloq.com/8c5de91f54c08768bfb68f2f3dbf6fdc78f51b58.png"
+                             alt="Learning Management System" class="project-image w-full">
+                        <div class="absolute top-4 right-4">
+                            <div class="complexity-indicator">
+                                <div class="complexity-dot active"></div>
+                                <div class="complexity-dot active"></div>
+                                <div class="complexity-dot active"></div>
+                                <div class="complexity-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="project-title text-xl font-bold text-white mb-3">Learning Management System</h3>
+                        <p class="project-description text-slate-300 mb-4 text-sm">
+                            Comprehensive learning platform with live classes, assignments, and user tracking. Features WebSocket-based real-time updates and modular system architecture.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag px-2 py-1 rounded-full">Spring Boot</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">ReactJS</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">WebSocket</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">PostgreSQL</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">Redis</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">JWT</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-slate-400 text-xs">Educational Platform</span>
+                            <div class="flex space-x-2">
+                                <a href="https://github.com/imrajeevnayan/lms-platform" class="text-slate-400 hover:text-amber-400 transition-colors">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://lms-demo.imrajeevnayan.com" class="text-slate-400 hover:text-teal-400 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Online Movie Booking System -->
+                <div class="project-item rounded-lg overflow-hidden animate-on-scroll"
+                     data-categories="spring-boot,reactjs,full-stack"
+                     data-tech="Spring Boot,ReactJS,PostgreSQL,Redis,JWT"
+                     data-github="https://github.com/rajeevnayan/movie-booking"
+                     data-demo="https://movies-demo.rajeevnayan.com">
+                    <div class="relative overflow-hidden">
+                        <img src="https://kimi-web-img.moonshot.cn/img/media.geeksforgeeks.org/06771e43bb35866e1ab68ed1d2032603c4c34100.png"
+                             alt="Movie Booking System" class="project-image w-full">
+                        <div class="absolute top-4 right-4">
+                            <div class="complexity-indicator">
+                                <div class="complexity-dot active"></div>
+                                <div class="complexity-dot active"></div>
+                                <div class="complexity-dot active"></div>
+                                <div class="complexity-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="project-title text-xl font-bold text-white mb-3">Online Movie Booking System</h3>
+                        <p class="project-description text-slate-300 mb-4 text-sm">
+                            Full-stack movie booking system with seat selection, booking history, and JWT authentication. Features Redis caching for faster responses and optimized REST APIs.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag px-2 py-1 rounded-full">Spring Boot</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">ReactJS</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">PostgreSQL</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">Redis</span>
+                            <span class="tech-tag px-2 py-1 rounded-full">JWT</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-slate-400 text-xs">Booking Platform</span>
+                            <div class="flex space-x-2">
+                                <a href="https://github.com/imrajeevnayan/movie-booking" class="text-slate-400 hover:text-amber-400 transition-colors">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://movies-demo.rajeevnayan.com" class="text-slate-400 hover:text-teal-400 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal fixed inset-0 z-50 hidden flex items-center justify-center p-4">
+        <div class="modal-content rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <button class="close-modal">&times;</button>
+            <div class="p-8">
+                <h2 class="modal-title text-3xl font-bold text-white mb-6"></h2>
+                <p class="modal-description text-slate-300 mb-6 leading-relaxed"></p>
+                <div class="modal-tech mb-6">
+                    <h3 class="text-xl font-semibold text-white mb-3">Technologies Used</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <!-- Tech tags will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="modal-github bg-amber-500 hover:bg-amber-600 text-slate-900 px-6 py-3 rounded-lg font-semibold transition-all duration-300 inline-flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        View Code
+                    </a>
+                    <a href="#" class="modal-demo bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 inline-flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                        Live Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="animate-on-scroll">
+                <h2 class="text-3xl font-display font-bold text-white mb-6">Interested in Collaboration?</h2>
+                <p class="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+                    I'm always open to discussing new projects and opportunities. Let's connect and build something amazing together.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="contact.html" class="bg-amber-500 hover:bg-amber-600 text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                        Get In Touch
+                    </a>
+                    <a href="about.html" class="border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                        Learn More About Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-700 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="https://linkedin.com/in/imrajeevnayan" class="text-slate-400 hover:text-amber-400 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/imrajeevnayan" class="text-slate-400 hover:text-amber-400 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:imrajeevnayan@gmail.com" class="text-slate-400 hover:text-amber-400 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </a>
+                </div>
+                <p class="text-slate-400 text-sm">
+                    © 2025 Rajeev Nayan. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
