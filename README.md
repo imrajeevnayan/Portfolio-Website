@@ -38,13 +38,17 @@ You only need a web browser to view the website.
 To run the website locally, follow these steps:
 
 1. Clone the repository:
+
     ```bash
     git clone https://github.com/imrajeevnayan/Portfolio.git
     ```
+
 2. Navigate to the project directory:
+
     ```bash
     cd Portfolio-Website
     ```
+
 3. Open `index.html` in your preferred web browser to view the site.
 
 ## 🗂️ Project Structure
@@ -69,7 +73,8 @@ To run the website locally, follow these steps:
 
 ````
 
-### Key Files:
+### Key Files
+
 - `index.html`: The homepage of the portfolio.
 - `about.html`: A page that introduces me and my skills.
 - `projects.html`: A page showcasing my projects, each with a description, technologies used, and links.
@@ -82,20 +87,27 @@ To run the website locally, follow these steps:
 
 Contributions are what make the open-source community a great place to learn, share, and grow. If you have any suggestions or want to contribute to the project, feel free to fork the repository and create a pull request.
 
-### How to Contribute:
+### How to Contribute
+
 1. Fork the repository
 2. Create a new feature branch:
+
     ```bash
     git checkout -b feature/YourFeature
     ```
+
 3. Commit your changes:
+
     ```bash
     git commit -m 'Add some amazing feature'
     ```
+
 4. Push to your branch:
+
     ```bash
     git push origin feature/YourFeature
     ```
+
 5. Open a pull request.
 
 If you're unsure, feel free to open an issue with the tag "enhancement".
@@ -108,6 +120,4 @@ This project is distributed under the MIT License. See the [LICENSE](LICENSE) fi
 
 For any inquiries, feel free to reach out to me at:
 **Email**: [imrajeevnayan@gmail.com](mailto:imrajeevnayan@gmail.com)
-**GitHub Project Link**: [https://github.com/imrajeevnayan/Portfolio](https://github.com/imrajeevnayan/Portfolio)
-
-
+**GitHub Project Link**: (<https://github.com/imrajeevnayan/Portfolio>)

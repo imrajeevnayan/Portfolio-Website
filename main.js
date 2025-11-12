@@ -228,7 +228,7 @@ class PortfolioApp {
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-bold text-white mb-3">${project.title}</h3>
+                    <h3 class="text-xl font-bold mb-3">${project.title}</h3>
                     <p class="text-slate-300 mb-4 text-sm">${project.description}</p>
                     <div class="flex flex-wrap gap-2">
                         ${project.tech.map(tech => `
