@@ -135,5 +135,5 @@ This project is distributed under the MIT License. See the [LICENSE](LICENSE) fi
   </a>
 </p>
    <h1 align="center">
-## 🏆 Thank you for visiting my portfolio website! 😊
+ 🏆 Thank you for visiting my portfolio website! 😊
 </h1>
