@@ -2,9 +2,9 @@
 
 This is my personal **Portfolio Website** designed to showcase my skills, projects, and experience. It serves as a professional online presence for potential employers, collaborators, and anyone interested in my work. The website features a modern design, a responsive layout, and interactive elements for a great user experience.
 
-## 📸 Portfolio Image
+## 📸 Portfolio Demo
 
-![Portfolio Image](./resources/hero-image.png)
+![Portfolio Demo](./resources/portfolio-demo.gif)
 
 ## 🚀 Live Demo
 
